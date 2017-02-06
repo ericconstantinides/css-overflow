@@ -1,3 +1,40 @@
+@import
+  "variables",
+  "mixins",
+  "layout";
+body {
+  background: whitesmoke;
+  position: relative;
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 50%;
+  //   width: $body-width;
+  //   transform: translateX(-50%);
+  //   outline: 1px dashed #999;
+  //   z-index: 1;
+  //   pointer-events: none;
+  // }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 50%;
+  //   width: $site-width;
+  //   transform: translateX(-50%);
+  //   outline: 1px dashed #999;
+  //   z-index: 1;
+  //   pointer-events: none;
+  // }
+}
+.site-container,
+.body-container {
+  outline: 1px dashed #ccc;
+  background: white;
+}
 //—————————————————————————————————————————————————————————————————————
 // CSS Overflow
 //—————————————————————————————————————————————————————————————————————
@@ -45,10 +82,10 @@
 //    .is-vertical            = ignores widths and displays image then body
 //    .has-body-top           = moves body text to the top instead of center in css-overflow
 //
-// * optional. body will default to rest of image width
+//  The following are distinct classes from above that will overflow a single element:
 //
-//  These are special classes that will overflow a single element:
 //  Structure and classes:
+//
 // ──.css-overflow--full-browser-width     = overflows out to the entire viewport
 // ──.css-overflow--site-container-width   = overflows out to the $site-width
 // ──.css-overflow--inner-body-width       = overflows out to the $body-width
@@ -136,26 +173,10 @@
       margin-right: auto;
     }
   }
-  padding-bottom: 6px;
-  &:after {
-    content: "";
-    position: absolute;
-    display: block;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 6px;
-    background: url(../images/bg--green-tile.jpg) center top;
-  }
-}
-.css-overflow__title {
-  @include responsive(font-size, 1.125, 0.9)
-  text-align: center;
 }
 .css-overflow__body {
   padding: 1.25em 1em;
   position: relative;
-  // @include responsive(font-size, 1, 0.825, 800);
   ul,li {
     margin: 0;
     padding: 0;
@@ -287,7 +308,6 @@
 // Inner Body Width
 //—————————————————————————————————————————————————————————————————————
 // full-width makes something full width, regardless of it's container or site-padding
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Full Browser Width
 // This always extends to the outer edge of the viewport,
