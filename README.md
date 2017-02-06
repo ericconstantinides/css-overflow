@@ -1,6 +1,9 @@
 #CSS Overflow
 
-Here's what the CSS Overflow does:
+## Demo
+<a href="//ericconstantinides.github.io/css-overflow/">Here's a demo of css-overflow on images</a>
+
+## Summary
 
 CSS Overflow encourages overlap! Overlap to your pleasure. CSS Overflow will bend for you. CSS Overflow keeps BODY text within the the $site-width, while extend automatically extending images all the way out to the viewport borders.
 
