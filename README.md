@@ -1,26 +1,25 @@
-#CSS Overflow
+# CSS Overflow
 
 ## Demo
-<a href="//ericconstantinides.github.io/css-overflow/">Here's a demo of css-overflow on images</a>
+[Here's a demo of css-overflow on images](www.ericconstantinides.github.io/css-overflow)
 
 ## Summary
 
-CSS Overflow encourages overlap! Overlap to your pleasure. CSS Overflow will bend for you. CSS Overflow keeps BODY text within the the $site-width, while extend automatically extending images all the way out to the viewport borders.
+CSS Overflow encourages overlap! Overlap to your pleasure. CSS Overflow will bend for you. CSS Overflow keeps BODY text within the the $site-width, while automatically extending images (or anything else) all the way out to the viewport.
 
-CSS Overflow is in a flexbox container with min height of 55vmin (so just over half of vh or vw)
+CSS Overflow uses a flexbox container with min height of 55vmin (so just over half of vh or vw)
 
 ##Here's how it works:
 
 CSS Overflow works because we have a few (newer) things at our disposal:
-* SCSS
-* $site-sidth
-* CSS calc (this is the killer feature)
-* vw (viewport width) (this is also a killer feature)
-* media-queries (this is also a killer feature)
+* `SASS`
+* `calc` in CSS (killer feature #1)
+* `vw` in CSS (killer feature #2)
+* `media-queries` (killer feature #3)
 
-When we're INSIDE the $site-width, body and image percentages are essentially taken at face value. When we're OUTSIDE the $site-width, body and image percentages are (calc)ulated as.
+When the viewport is <em>inside</em> the `$site-width`, body and image percentages are essentially taken at face value. When you're <em>outside</em> the `$site-width`, body and image percentages are `calc`ulated.
 
-##The Structure:
+## The Structure:
 <pre>
 ──.css-overflow (plus classes below)
         │
@@ -49,7 +48,7 @@ When we're INSIDE the $site-width, body and image percentages are essentially ta
    .is-vertical            = ignores widths and displays image then body
    .has-body-top           = moves body text to the top instead of center in css-overflow
 </pre>
-##The following are distinct classes from above that will overflow a single element:
+## The following are distinct classes from above that will overflow a single element:
  Structure and classes:
 <pre>
 ──.css-overflow--full-browser-width     = overflows out to the entire viewport
